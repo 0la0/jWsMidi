@@ -25,7 +25,7 @@ Create a connection to the server from a browser.
 var midi = new WsMidi.Connection({
   ip: location.host, //IP Address of the host running the server
   port: 8080,       //Port as configured on the server
-  nofity: funciton (msg) {
+  nofity: function (msg) {
     //A callback function executed when the client receives messages
     //msg is a WsMidi.Message object
   }
