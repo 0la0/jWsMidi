@@ -1,0 +1,70 @@
+body
+{
+  font-family: helvetica, arial, sans-serif;
+  font-size: 1.3em;
+  background: #666666;
+}
+
+#mainContainer
+{
+  width: 340px;
+  height: 550px;
+  border: 2px solid black;
+  background: #cccccc;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.layer
+{
+  margin-top: 10px;
+  margin-left: 20px;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+.button
+{
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px; 
+}
+
+.parent
+{
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+.sliderField
+{
+  background: #ffffff;
+  border: 2px solid #333333;
+  border-radius: 2px;
+  margin-left: 55px;
+  margin-top: 10px;
+}
+
+.knobParent
+{
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+.knob
+{
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 5px;
+  border: 3px solid #cccccc;
+  border-radius: 3px;
+  background: #222222;
+  cursor: pointer;
+  float: left;
+}
