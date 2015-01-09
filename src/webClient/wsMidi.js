@@ -31,7 +31,7 @@
     this.socketIsConnected = false;
     this.connectToServer(params.ip, params.port);
     this.hasNotification = false;
-    if (params.notify) {
+    if (typeof(params.notify) === 'function') {
       this.notify = params.notify;
       this.hasNotification = true;
     }
@@ -41,6 +41,10 @@
 
     send: function (msg) {
       if (this.socketIsConnected) {
+        if (!(msg instanceof Message)) {
+          throw 'can only send a WsMidi.Message object';
+          return;
+        }
         try {
           this.socket.send(msg.toString());
         }
@@ -89,10 +93,10 @@
    *************************************************/
   function Message (status, channel, data1, data2) {
     this.data = new Uint8ClampedArray(4);   
-    if (status != undefined) this.data[0] = status;
-    if (channel != undefined) this.data[1] = channel;
-    if (data1 != undefined) this.data[2] = data1;
-    if (data2 != undefined) this.data[3] = data2;
+    if (status != undefined) this.setCommand(status);
+    if (channel != undefined) this.setChannel(channel);
+    if (data1 != undefined) this.setData1(data1);
+    if (data2 != undefined) this.setData2(data2);
   }
 
   Message.prototype = {
