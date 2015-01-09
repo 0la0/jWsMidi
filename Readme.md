@@ -1,6 +1,11 @@
 #jWsMidi
-Communicate with MIDI devices via WebSocket clients.
-jWsMidiServer is a Java process that manages communication between MIDI devices and WS clients.  wsMidi.js is a JavaScript library that manages and abstracts the connection to the server and message formatting.
+Communicate with MIDI devices via WebSocket clients.  There are two components to jWsMidi
+
+####[jWsMidiServer](dist/)
+is a Java process that manages communication between MIDI devices and WS clients.  
+
+####[wsMidi.js](src/webClient/)
+is a JavaScript library that manages and abstracts the connection to the server and message formatting.
 
 The motivation for this project is to allow any device with a browser to become a MIDI controller for audio performance software, or to control a browser app with a MIDI device. 
 
@@ -8,11 +13,11 @@ The server UI allows the user to create two different processes.  "Web Socket to
 
 ---
 ####Dependencies
-Java-WebSocket
+Java-WebSocket: 
 https://github.com/TooTallNate/Java-WebSocket
 
 ---
-###Useage
+###Usage
 Start the server by running the jar in the dist directory.
 ```Shell
 java -jar dist/jWsMidiServer.jar
@@ -51,4 +56,4 @@ function notifyCallback (msg) {
 }
 ```
 
-[Web client examples are located in the dist directory](dist/exampleWebClients)
+[Web client examples are located in the dist directory.](dist/exampleWebClients)
