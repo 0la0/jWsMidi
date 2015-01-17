@@ -14,6 +14,9 @@ The server UI allows the user to create two different processes.  "Web Socket to
 Java-WebSocket: 
 https://github.com/TooTallNate/Java-WebSocket
 
+Server tested on JRE 1.7+
+Web library requires a browser with web sockets.
+
 ---
 ###Usage
 Start the server by running the jar in the dist directory.
